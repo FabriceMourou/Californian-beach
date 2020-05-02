@@ -8,6 +8,7 @@
 
 import Foundation
 
+// comment test develop
 class SeashoreManager {
     let name: String
     let numberOfTatoos: Int

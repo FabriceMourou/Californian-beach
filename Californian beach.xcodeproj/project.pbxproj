@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E21FEB98245AFC0600CD12CE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21FEB97245AFC0600CD12CE /* main.swift */; };
+		E21FEB9F245AFC7800CD12CE /* seashoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21FEB9E245AFC7800CD12CE /* seashoreManager.swift */; };
+		E21FEBA1245AFCAD00CD12CE /* vacationer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21FEBA0245AFCAD00CD12CE /* vacationer.swift */; };
+		E21FEBA3245AFCF600CD12CE /* beach.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21FEBA2245AFCF600CD12CE /* beach.swift */; };
+		E28BA32E245CD7E800FC9BBC /* beachToy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28BA32D245CD7E800FC9BBC /* beachToy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		E21FEB94245AFC0600CD12CE /* Californian beach */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Californian beach"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21FEB97245AFC0600CD12CE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E21FEB9E245AFC7800CD12CE /* seashoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seashoreManager.swift; sourceTree = "<group>"; };
+		E21FEBA0245AFCAD00CD12CE /* vacationer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vacationer.swift; sourceTree = "<group>"; };
+		E21FEBA2245AFCF600CD12CE /* beach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beach.swift; sourceTree = "<group>"; };
+		E28BA32D245CD7E800FC9BBC /* beachToy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beachToy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				E21FEB97245AFC0600CD12CE /* main.swift */,
+				E21FEB9E245AFC7800CD12CE /* seashoreManager.swift */,
+				E21FEBA0245AFCAD00CD12CE /* vacationer.swift */,
+				E21FEBA2245AFCF600CD12CE /* beach.swift */,
+				E28BA32D245CD7E800FC9BBC /* beachToy.swift */,
 			);
 			path = "Californian beach";
 			sourceTree = "<group>";
@@ -120,7 +132,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E21FEBA1245AFCAD00CD12CE /* vacationer.swift in Sources */,
+				E28BA32E245CD7E800FC9BBC /* beachToy.swift in Sources */,
+				E21FEBA3245AFCF600CD12CE /* beach.swift in Sources */,
 				E21FEB98245AFC0600CD12CE /* main.swift in Sources */,
+				E21FEB9F245AFC7800CD12CE /* seashoreManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

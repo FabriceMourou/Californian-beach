@@ -8,5 +8,7 @@
 
 import Foundation
 
-print("Hello, World!")
+let seashoreManager = SeashoreManager(name: "Gustavo", numberOfTatoos: 127)
+
+seashoreManager.startNewDay()
 

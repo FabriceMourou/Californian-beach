@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class Vacationer {
     let name: String
     var sunTanning: Int
@@ -20,4 +19,13 @@ class Vacationer {
         self.sunTanning = sunTanning
       
     }
+    
+    func describe() {
+        print("\(name)")
+    }
+    
+//    func zouzou(){
+//        print("ALLEZ ! \(sunTanning)")
+//    }
+    
 }

@@ -8,25 +8,20 @@
 
 import Foundation
 
-// comment test develop
+
+
+// MARK: - Internal
+
+// MARK: Properties - Internal
+
 class SeashoreManager {
-    let name: String
-    let numberOfTatoos: Int
-    var vacationer: [Vacationer] = []
     
-    init(name: String, numberOfTatoos: Int) {
-        self.name = name
-        self.numberOfTatoos = numberOfTatoos
-        
-    }
     
     let vacationers: [Vacationer] = [
         Vacationer(name: "Matheus", sunTanning: 40),
         Vacationer(name: "Beatriz", sunTanning: 31),
         Vacationer(name: "Helena", sunTanning: 27)
     ]
-
-    
     
     let beachName = Beach(
         name: "Copacabana 🇧🇷 🏝",
@@ -35,45 +30,52 @@ class SeashoreManager {
         skyColor: "🔵 bleu azur 🔵"
     )
     
-    let sailor = "⚓️ Guilherme ⚓️"
+    // MARK:  Internal
     
+    // MARK: Methods - Internal
+    
+    init(name: String, numberOfTatoos: Int) {
+        self.name = name
+        self.numberOfTatoos = numberOfTatoos
+        
+    }
     func startNewDay() {
-        //        for vacationer in vacationers{
-        //            vacationer.zouzou()
-        //        }
         
         sayHello()
         giveNewsOfTheDay()
         isHeOntheBeach()
         isThereRedFlag()
         createVacationers()
-        isReadyToSurf()
         playBeach()
         isReadyToSwim()
         isReadyToSail()
-        
-        
-        
-        
-        
-        
-        
+        isReadyToSurf()
     }
     
-    func sayHello() {
-        print(" Bonjour à tous ! Je suis \(name) 🧜🏻‍♂️ ")
-        print(" N'ayez pas peur ! J'ai \(numberOfTatoos) tatouages 🧿 !")
-        print(" Je vais vous aider à passer une bonne journée !!")
+    // MARK: - Private
+    
+    // MARK: Properties - Private
+    
+    private let name: String
+    private let numberOfTatoos: Int
+    private var vacationer: [Vacationer] = []
+    
+    // MARK: Methods - Private
+    
+    private func sayHello() {
+        print("Bonjour à tous ! Je suis \(name) 🧜🏻‍♂️ ")
+        print("N'ayez pas peur ! J'ai \(numberOfTatoos) tatouages 🧿 !")
+        print("Je vais vous aider à passer une bonne journée !!")
         print()
     }
     
     
-    func giveNewsOfTheDay() {
+    private func giveNewsOfTheDay() {
         print("Le ciel est \(beachName.skyColor) et la température de l'eau 🌊 est de \(beachName.seaWaterTemperature)°C")
         print ()
     }
     
-    func isHeOntheBeach() {
+    private func isHeOntheBeach() {
         if vacationers.isEmpty {
             print("Il n'y a personne sur la plage de \(beachName.name) !")
         } else {
@@ -84,84 +86,87 @@ class SeashoreManager {
         }
     }
     
-    func isThereRedFlag() {
+    private func isThereRedFlag() {
         if beachName.seaWaterTemperature <= 15 {
             print()
-            print(" ❌ Le drapeau est rouge ❌ !")
+            print("❌ Le drapeau est rouge ❌ !")
             print()
         } else {
-            print(" ✅ Le drapeau est vert ✅ !")
+            print("✅ Le drapeau est vert ✅ !")
             
         }
     }
     
-    func createVacationers() {
-            if vacationers.isEmpty {
-                print(" Tous les matelas sont libres sur la plage de \(beachName.name.uppercased()) !")
-            } else {
-                print()
-                print("Qui nous accompagne aujourd'hui sur 🔆\(beachName.name.uppercased())🔆 ?")
-                print()
-                print("\(vacationers[2].name) 🚴🏽 Vous êtes resplandissante !")
-                print("Votre indice de bronzage est de \(vacationers[2].sunTanning)")
-                print()
-                print("\(vacationers[1].name) 🧘🏾‍♂️ Je vous trouve en grande forme !")
-                print("Votre indice de bronzage est de \(vacationers[1].sunTanning)")
-                print()
-                print("\(vacationers[0].name) 🤸🏼‍♂️ Quelle souplesse !")
-                print("Votre indice de bronzage est de \(vacationers[0].sunTanning), Attention au 🌞 ! Protegez vous !")
-            }
+    private func createVacationers() {
+        if vacationers.isEmpty {
+            print("Tous les matelas sont libres sur la plage de \(beachName.name.uppercased()) !")
+        } else {
+            print()
+            print("Qui nous accompagne aujourd'hui sur 🔆\(beachName.name.uppercased())🔆 ?")
+            print()
+            print("\(vacationers[2].name) 🚴🏽 Vous êtes resplandissante !")
+            print("Votre indice de bronzage est de \(vacationers[2].sunTanning)")
+            print()
+            print("\(vacationers[1].name) 🧘🏾‍♂️ Je vous trouve en grande forme !")
+            print("Votre indice de bronzage est de \(vacationers[1].sunTanning)")
+            print()
+            print("\(vacationers[0].name) 🤸🏼‍♂️ Quelle souplesse !")
+            print("Votre indice de bronzage est de \(vacationers[0].sunTanning), Attention au 🌞 ! Protegez vous !")
+        }
         if beachName.seaWaterTemperature <= 15 {
             print()
             print("Aujourd'hui sur la plage de \(beachName.name), la petite laine est de rigueur ⛸ !")
         } else {
             print("")
-    }
+        }
     }
     
-    func isReadyToSurf() {
+    private func isReadyToSurf() {
         if beachName.seaWaterTemperature <= 15 {
-            print()
             print("La température de l'eau est de \(beachName.seaWaterTemperature)°C !!! ❄️ ")
             if vacationers.isEmpty {
                 print()
             } else {
                 print("\(vacationers[0].name) sortez votre combinaison de plongée !🤿 ")
+                print()
             }
         } else {
             if vacationers.capacity >= 1{
                 print()
                 print (" 🏄🏼‍♀️ Grand concours de surf ! 🏄🏾")
-                print("Vous voulez participer ?")
                 print()
-                 
+                print("Une magnique coupe à gagner ! 🏆")
+                print("Qui veut se jeter à l'eau ?")
+                
+                print()
+                
                 for id in vacationers {
                     print(terminator: " \(id.name)? :")
-                    if let name = readLine() {
-                        print("Hello, \(name)!")
+                    let input = readLine()
+                    if let input = input {
+                        print("C'est \(input) pour \(id.name) ! ")
                     } else {
-                        print("Why are you being so coy?")
+                        print("Je vous laisse réfléchir ...")
                     }
                 }
             } else {
-                print()
                 print("Oh non ... il n'y a personne pour le grand concours de surf ! 🏄🏾 ")
-                print("")
             }
             print()
             if vacationers.isEmpty {
-                print("\(beachName.name.uppercased()) est triste sans vous !")
+                print()
             } else {
-                print("Avez vous envie de vous mettre à l'eau 🌊 ?")
+                print("A l'eau 🌊 ! Prêt à affronter les vagues ?")
+                print()
             }
         }
     }
     
-    func playBeach(){
+    private func playBeach(){
         beachToy(frisbee: "🥏 Le frisbee ?", beachBall: "🏐 Un volley ?", plasticBoat: "⛵️ ou s'amuser avec son petit bateau ?")
     }
     
-    func beachToy(frisbee: String, beachBall: String, plasticBoat: String) {
+    private func beachToy(frisbee: String, beachBall: String, plasticBoat: String) {
         print()
         if vacationers.isEmpty {
             print("Nous vous attendons !")
@@ -179,38 +184,38 @@ class SeashoreManager {
             }
         }
     }
-    func isReadyToSwim() {
+    private func isReadyToSwim() {
         if beachName.seaWaterTemperature <= 15{
             print()
-           
+            
             if vacationers.isEmpty {
                 print()
             } else {
                 print("🏊🏼‍♀️ Nager ? Vraiment ❄️ ? ")
-                 print("\(vacationers[0].name) peut te prêter sa combi ... ")
+                print("\(vacationers[0].name) peut te prêter sa combi ... ")
             }
         }else {
             if vacationers.isEmpty {
                 print()
             } else {
                 print()
-                print("🏊🏼‍♀️ Nager ? Vous pouvez y aller les yeux fermés, l'eau est \(beachName.seaWaterToday)")
+                print("Nager 🏊🏼‍♀️ ? Vous pouvez y aller les yeux fermés, l'eau est \(beachName.seaWaterToday)")
             }
         }
     }
     
-    func isReadyToSail() {
+    private func isReadyToSail() {
+        let sailorName = "⚓️ Guilherme ⚓️"
+        
         if vacationers.isEmpty {
             print()
         } else {
             print()
-            print("Une envie de naviguer 🛥 ? allez voir mon ami \(sailor) ")
-            print()
-            
-            
-            
+            print("Envie de prendre le large 🛳 ? \(sailorName) va vous y ammener !")
         }
         
+        
     }
+    
     
 }

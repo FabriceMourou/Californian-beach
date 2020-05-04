@@ -9,13 +9,26 @@
 import Foundation
 
 class BeachToy {
-    var frisbee: String
-    var beachBall: String
-    var plasticBoat: String
+    
+    
+    // MARK: - Internal
+    
+    // MARK: Methods - Internal
     
     init(frisbee: String, beachBall: String, plasticBoat: String) {
         self.frisbee = frisbee
         self.beachBall = beachBall
         self.plasticBoat = plasticBoat
     }
+    
+    
+    // MARK: - Private
+    
+    // MARK: Properties - Private
+    
+    private var frisbee: String
+    private var beachBall: String
+    private var plasticBoat: String
+    
+    
 }

@@ -9,23 +9,28 @@
 import Foundation
 
 class Vacationer {
-    let name: String
-    var sunTanning: Int
-    var beach: [Beach] = []
     
+    
+    // MARK: - Internal
+    
+    // MARK: Methods - Internal
     
     init(name: String, sunTanning: Int) {
         self.name = name
         self.sunTanning = sunTanning
-      
+        
     }
     
-    func describe() {
-        print("\(name)")
-    }
     
-//    func zouzou(){
-//        print("ALLEZ ! \(sunTanning)")
-//    }
+    // MARK: - Private
+    
+    // MARK: Properties - Private
+    
+    
+    private let name: String
+    private var sunTanning: Int
+    
+    
+    
     
 }

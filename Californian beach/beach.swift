@@ -9,25 +9,42 @@
 import Foundation
 
 class Beach {
-    var name: String
-    var seaWaterToday: String
-    var seaWaterTemperature: Int
-    var skyColor: String
-    var beachToy: [BeachToy] = []
     
-    init(name: String, seaWaterToday: String, seaWaterTemperature: Int, skyColor: String){
+    
+    // MARK: - Internal
+    
+    // MARK: Methods - Internal
+    
+    
+    internal init(name: String, seaWaterToday: String, seaWaterTemperature: Int, skyColor: String) {
         self.name = name
         self.seaWaterToday = seaWaterToday
         self.seaWaterTemperature = seaWaterTemperature
         self.skyColor = skyColor
+        
     }
     
-   
+    // MARK: - Private
+    
+    // MARK: Properties - Private
+    
+    private var name: String
+    private var seaWaterToday: String
+    private var seaWaterTemperature: Int
+    private var skyColor: String
     
     
-
-
+    
+    
+    
 }
 
 
-    
+
+
+
+
+
+
+
+

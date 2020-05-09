@@ -13,6 +13,14 @@ class BeachToy {
     
     // MARK: - Internal
     
+    
+    // MARK: Properties - Internal
+    
+    var frisbee: String
+    var beachBall: String
+    var plasticBoat: String
+    
+    
     // MARK: Methods - Internal
     
     init(frisbee: String, beachBall: String, plasticBoat: String) {
@@ -26,9 +34,7 @@ class BeachToy {
     
     // MARK: Properties - Private
     
-    private var frisbee: String
-    private var beachBall: String
-    private var plasticBoat: String
+    
     
     
 }

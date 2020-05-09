@@ -13,6 +13,11 @@ class Vacationer {
     
     // MARK: - Internal
     
+    // MARK: Properties - Internal
+    
+    let name: String
+    var sunTanning: Int
+    
     // MARK: Methods - Internal
     
     init(name: String, sunTanning: Int) {
@@ -27,8 +32,7 @@ class Vacationer {
     // MARK: Properties - Private
     
     
-    private let name: String
-    private var sunTanning: Int
+
     
     
     

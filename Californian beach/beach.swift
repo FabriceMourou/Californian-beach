@@ -13,6 +13,13 @@ class Beach {
     
     // MARK: - Internal
     
+    // MARK: Properties - Internal
+    
+    var name: String
+    var seaWaterToday: String
+    var seaWaterTemperature: Int
+    var skyColor: String
+    
     // MARK: Methods - Internal
     
     
@@ -28,10 +35,7 @@ class Beach {
     
     // MARK: Properties - Private
     
-    private var name: String
-    private var seaWaterToday: String
-    private var seaWaterTemperature: Int
-    private var skyColor: String
+    
     
     
     

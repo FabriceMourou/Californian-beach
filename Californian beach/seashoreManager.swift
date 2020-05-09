@@ -45,8 +45,8 @@ class SeashoreManager {
         giveNewsOfTheDay()
         isHeOntheBeach()
         isThereRedFlag()
-        createVacationers()
-        playBeach()
+        introduceVacationers()
+        defineBeachToy()
         isReadyToSwim()
         isReadyToSail()
         isReadyToSurf()
@@ -97,7 +97,7 @@ class SeashoreManager {
         }
     }
     
-    private func createVacationers() {
+    private func introduceVacationers() {
         if vacationers.isEmpty {
             print("Tous les matelas sont libres sur la plage de \(beachName.name.uppercased()) !")
         } else {
@@ -127,46 +127,48 @@ class SeashoreManager {
             if vacationers.isEmpty {
                 print()
             } else {
-                print("\(vacationers[0].name) sortez votre combinaison de plongée !🤿 ")
+                print("\(vacationers[0].name) a toujours sa combinaison de plongée !🤿 ")
                 print()
             }
         } else {
             if vacationers.capacity >= 1{
                 print()
                 print (" 🏄🏼‍♀️ Grand concours de surf ! 🏄🏾")
+                print("Une magnifique coupe à gagner ! 🏆")
                 print()
-                print("Une magnique coupe à gagner ! 🏆")
                 print("Qui veut se jeter à l'eau ?")
-                
                 print()
                 
                 for id in vacationers {
-                    print(terminator: " \(id.name)? :")
-                    let input = readLine()
-                    if let input = input {
-                        print("C'est \(input) pour \(id.name) ! ")
-                    } else {
-                        print("Je vous laisse réfléchir ...")
+                    print("\(id.name)? :")
+                    if let input = readLine() {
+                        if input == "oui"{
+                            print("C'est \(input) pour \(id.name) 🤘🏽! ")
+                        }  else  {
+                            print("C'est \(input) pour \(id.name), La péche c'est plus rigolo ! 🎣  ")
+                            //
+                        }
                     }
                 }
             } else {
                 print("Oh non ... il n'y a personne pour le grand concours de surf ! 🏄🏾 ")
             }
+        }
+        if vacationers.capacity < 1 || beachName.seaWaterTemperature <= 15{
             print()
-            if vacationers.isEmpty {
-                print()
-            } else {
-                print("A l'eau 🌊 ! Prêt à affronter les vagues ?")
-                print()
-            }
+            print("NO SURF TODAY ! 🌊")
+            print()
+        } else {
+            print("GO TO SURF ! 🏄🏾 🌊")
+            print()
         }
     }
     
-    private func playBeach(){
-        beachToy(frisbee: "🥏 Le frisbee ?", beachBall: "🏐 Un volley ?", plasticBoat: "⛵️ ou s'amuser avec son petit bateau ?")
+    func defineBeachToy(){
+        wantToPlayOnTheBeach(frisbee: "🥏 Le frisbee ?", beachBall: "🏐 Un volley ?", plasticBoat: "⛵️ ou s'amuser avec son petit bateau ?")
     }
     
-    private func beachToy(frisbee: String, beachBall: String, plasticBoat: String) {
+    func wantToPlayOnTheBeach(frisbee: String, beachBall: String, plasticBoat: String) {
         print()
         if vacationers.isEmpty {
             print("Nous vous attendons !")
@@ -184,7 +186,9 @@ class SeashoreManager {
             }
         }
     }
-    private func isReadyToSwim() {
+    
+    
+    func isReadyToSwim() {
         if beachName.seaWaterTemperature <= 15{
             print()
             
@@ -192,7 +196,7 @@ class SeashoreManager {
                 print()
             } else {
                 print("🏊🏼‍♀️ Nager ? Vraiment ❄️ ? ")
-                print("\(vacationers[0].name) peut te prêter sa combi ... ")
+                print("\(vacationers[0].name) peut te prêter sa combi 🤿 ... ")
             }
         }else {
             if vacationers.isEmpty {
@@ -204,7 +208,7 @@ class SeashoreManager {
         }
     }
     
-    private func isReadyToSail() {
+    func isReadyToSail() {
         let sailorName = "⚓️ Guilherme ⚓️"
         
         if vacationers.isEmpty {
@@ -219,3 +223,4 @@ class SeashoreManager {
     
     
 }
+
